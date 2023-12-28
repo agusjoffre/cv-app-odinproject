@@ -1,13 +1,54 @@
-import React from "react"
+import React, { useState } from "react"
 import FormInput from "./FormInput"
 import ButtonSubmit from "./ButtonSubmit"
-export default function EducationForm () {
+export default function EducationForm ( { setData } ) {
+
+    const [ schoolName, setSchoolName ] = useState( '' )
+    const [ degree, setDegree ] = useState( '' )
+    const [ date, setDate ] = useState( '' )
+
+    const handleEducationForm = ( e ) => {
+        e.preventDefault()
+        setData( ( prevData ) => ( {
+            ...prevData,
+            education: [...prevData.education, {schoolName, degree, date}]
+        } ) )
+    }
+    
+
+    const handleSchoolName = ( e ) => {
+        setSchoolName( e.target.value )
+    }
+
+    const handleDegree = ( e ) => {
+        setDegree(e.target.value)
+    }
+
+    const handleDate = ( e ) => {
+        setDate(e.target.value)
+    }
+
     return (
-         <form>
+         <form onSubmit={handleEducationForm}> 
             <h1>Your education.</h1>
-            <FormInput label='School name'/>
-            <FormInput label='Degree' />
-            <FormInput label='Date' />
+            <FormInput
+                label='School name'
+                value={ schoolName }
+                type={ 'text' }
+                handleChange={ handleSchoolName }
+            />
+            <FormInput
+                label='Degree'
+                value={ degree }
+                type={ 'text' }
+                handleChange={ handleDegree }
+            />
+            <FormInput
+                label='Date'
+                value={ date }
+                type={ 'text' }
+                handleChange={ handleDate }
+            />
             <ButtonSubmit/>
         </form>
     )

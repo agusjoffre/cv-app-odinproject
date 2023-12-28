@@ -6,7 +6,7 @@ export default function GeneralForm ({setData}) {
 
     const [ name, setName ] = useState( '' )
     const [ email, setEmail ] = useState( '' )
-    const [ description, setDescription ] = useState('')
+    const [ description, setDescription ] = useState( '' )
 
     const handleName = ( e ) => {
         setName( e.target.value )
@@ -28,15 +28,34 @@ export default function GeneralForm ({setData}) {
             email: email,
             description: description
         } ) )
+        setName( '' )
+        setEmail( '' )
+        setDescription( '' )
+
     }
 
 
     return (
         <form onSubmit={handleGeneralForm}>
             <h1>General information about you.</h1>
-            <FormInput label='Name' handleChange={handleName}/>
-            <FormInput label='Email' handleChange={handleEmail}/>
-            <FormInput label='Description' type={ 'textarea' } handleChange={handleDescription} />
+            <FormInput
+                label='Name'
+                value={ name }
+                type={'text'}
+                handleChange={ handleName }
+            />
+            <FormInput
+                label='Email'
+                value={ email }
+                type={'text'}
+                handleChange={ handleEmail }
+            />
+            <FormInput
+                label='Description'
+                value={ description }
+                type={ 'textarea' }
+                handleChange={ handleDescription }
+            />
             <ButtonSubmit/>
         </form>
     )

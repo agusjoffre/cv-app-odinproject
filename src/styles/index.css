@@ -45,7 +45,7 @@ header {
     gap: 2rem;
 }
 
-#curriculum-img-icon {
+.icon {
     display: flex;
     align-items: center;
     justify-content: center;
