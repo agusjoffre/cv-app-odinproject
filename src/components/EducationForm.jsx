@@ -13,6 +13,9 @@ export default function EducationForm ( { setData } ) {
             ...prevData,
             education: [...prevData.education, {schoolName, degree, date}]
         } ) )
+        setSchoolName( '' )
+        setDegree( '' )
+        setDate( '' )
     }
     
 
