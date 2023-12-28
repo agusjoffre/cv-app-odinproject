@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,300;0,6..12,400;0,6..12,500;0,6..12,600;0,6..12,700;0,6..12,800;0,6..12,900;1,6..12,300&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 100;
+
+    --primary: #1c1c1c;
+    --alert: rgb(244, 240, 37);
+    --secondary: rgb(243, 243, 243);
+    --warning: rgb(192, 49, 49);
+    --important-ok: rgb(113, 186, 113);
+    --important-simple: rgb(110, 217, 253);
+}
+
+body {
+    background-color: var(--primary);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%23abac92' fill-opacity='0.20' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font-weight: 700;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+
+.top-h {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+#curriculum-img-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: auto;
+    text-align: center;
+}
+
+.app-title {
+    font-size: 4rem;
+    font-weight: 500;
+    color: var(--alert)
+}
+
+.app-description {
+    font-size: 1.5rem;
+    color: var(--secondary);
+    margin: 1rem 0;
+    font-weight: 400;
+    line-height: 1.5rem;
+}
+
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4rem;
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.curriculum-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
