@@ -1,27 +1,14 @@
 import React, { useState } from "react"
 import Form from "./Form"
 import Curriculum from "./Curriculum"
+import {initialPersonData} from "../personData"
 
 import "../styles/index.css"
 
 export default function Hero () {
+
+    const [ CVData, setCVData ] = useState(initialPersonData)
     
-    const [ CVData, setCVData ] = useState( {
-        name: '',
-        description: '',
-        email: '',
-        school: [ {
-            schoolName: '',
-            title: '',
-            date: ''
-        } ],
-        work: [ {
-            companyName: '',
-            position: '',
-            mainResponsabilities: '',
-            date: ''
-        }]
-    })
 
 
     return (

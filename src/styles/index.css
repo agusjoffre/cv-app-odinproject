@@ -8,6 +8,7 @@
     font-family: 'Nunito Sans', sans-serif;
     font-size: 12px;
     font-weight: 100;
+    color: var(--important-ok);
 
     --primary: #1c1c1c;
     --alert: rgb(244, 240, 37);
