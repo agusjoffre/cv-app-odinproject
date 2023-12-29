@@ -16,6 +16,7 @@ export default function InputEditFields({
   const [responsabilities, setResponsabilities] = useState(
     data.responsabilities,
   );
+
   const handleCompanyName = (e) => {
     setCompanyName(e.target.value);
   };
@@ -41,19 +42,23 @@ export default function InputEditFields({
   const handleSubmit = (e) => {
     e.preventDefault();
     if (tipo === "EDUCATION") {
+      const filteredEducationArr = cvData.education.filter(
+        (item) => item.id !== data.id,
+      );
       setData((prevData) => ({
         ...prevData,
         education: [
-          cvData.education,
+          ...filteredEducationArr,
           { schoolName, degree, date: educationDate },
         ],
       }));
     }
     if (tipo === "WORK") {
+      const filteredWorkArr = cvData.work.filter((item) => item.id !== data.id);
       setData((prevData) => ({
         ...prevData,
         work: [
-          cvData.work,
+          ...filteredWorkArr,
           { companyName, position, date: workDate, responsabilities },
         ],
       }));
@@ -143,7 +148,7 @@ export default function InputEditFields({
             onChange={handleResponsabilities}
           />
         </label>
-        <button type="button" className="btn Card-btn Card-btn-save">
+        <button type="submit" className="btn Card-btn Card-btn-save">
           Save
         </button>
       </form>

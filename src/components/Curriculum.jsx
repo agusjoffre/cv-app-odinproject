@@ -43,6 +43,7 @@ export default function Curriculum({ data, setData }) {
           <p className="cv-work-head-p">Work</p>
         </div>
         {data.work.map((workExperience) => {
+          console.log(workExperience.id);
           return (
             <Card
               cvData={data}
