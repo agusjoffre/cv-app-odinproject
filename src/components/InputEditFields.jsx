@@ -49,7 +49,7 @@ export default function InputEditFields({
         ...prevData,
         education: [
           ...filteredEducationArr,
-          { schoolName, degree, date: educationDate },
+          { schoolName, degree, date: educationDate, id: data.id },
         ],
       }));
     }
@@ -59,7 +59,13 @@ export default function InputEditFields({
         ...prevData,
         work: [
           ...filteredWorkArr,
-          { companyName, position, date: workDate, responsabilities },
+          {
+            companyName,
+            position,
+            date: workDate,
+            responsabilities,
+            id: data.id,
+          },
         ],
       }));
     }
