@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import FormInput from "./FormInput";
 import ButtonSubmit from "./ButtonSubmit";
 
-export default function WorkForm({ setData }) {
+export default function WorkForm({ setData, createID, id }) {
   const [companyName, setCompanyName] = useState("");
   const [position, setPosition] = useState("");
   const [responsabilities, setResponsabilities] = useState("");
@@ -10,6 +10,7 @@ export default function WorkForm({ setData }) {
 
   const handleCompany = (e) => {
     setCompanyName(e.target.value);
+    createID();
   };
 
   const handlePosition = (e) => {
@@ -30,7 +31,7 @@ export default function WorkForm({ setData }) {
       ...prevData,
       work: [
         ...prevData.work,
-        { companyName, position, responsabilities, date },
+        { companyName, position, responsabilities, date, id },
       ],
     }));
     setCompanyName("");

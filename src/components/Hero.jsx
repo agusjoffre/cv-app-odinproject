@@ -15,7 +15,7 @@ export default function Hero() {
         <Form setData={setCVData} />
       </aside>
       <section className="curriculum-container">
-        <Curriculum data={CVData} />
+        <Curriculum data={CVData} setData={setCVData} />
       </section>
     </main>
   );

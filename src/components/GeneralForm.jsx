@@ -26,10 +26,12 @@ export default function GeneralForm({ setData }) {
       name,
       email,
       description,
+      id,
     }));
     setName("");
     setEmail("");
     setDescription("");
+    setID("");
   };
 
   return (

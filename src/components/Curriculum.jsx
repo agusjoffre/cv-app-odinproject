@@ -2,14 +2,12 @@ import React from "react";
 import Card from "./Card";
 import "../styles/curriculum.css";
 
-const random = crypto.randomUUID();
-
-export default function Curriculum({ data }) {
+export default function Curriculum({ data, setData }) {
   return (
     <>
       <div className="card container-presentation-cv">
         <h1 className="cv-presentation">
-          Hey, I'm
+          Hey, I am
           <span>{data.name ? data.name : "Anonymous person"}</span>
         </h1>
         <p className="cv-presentation-description">{data.description}</p>
@@ -27,9 +25,11 @@ export default function Curriculum({ data }) {
         {data.education.map((educationExperience) => {
           return (
             <Card
+              cvData={data}
               data={educationExperience}
               type="EDUCATION"
-              key={() => random}
+              key={educationExperience.id}
+              setData={setData}
             />
           );
         })}
@@ -44,7 +44,15 @@ export default function Curriculum({ data }) {
           <p className="cv-work-head-p">Work</p>
         </div>
         {data.work.map((workExperience) => {
-          return <Card data={workExperience} type="WORK" key={() => random} />;
+          return (
+            <Card
+              cvData={data}
+              data={workExperience}
+              type="WORK"
+              key={workExperience.id}
+              setData={setData}
+            />
+          );
         })}
       </div>
     </>
