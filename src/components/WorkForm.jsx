@@ -38,8 +38,8 @@ export default function WorkForm ( { setData } ) {
 
 
     return (
-        <form onSubmit={handleWorkForm}>
-            <h1>Your experience.</h1>
+        <form onSubmit={handleWorkForm} className="form-card">
+            <h1 className="cv-form-head">Your work experience:</h1>
             <FormInput label='Company name' handleChange={handleCompany}/>
             <FormInput label='Position' handleChange={handlePosition}/>
             <FormInput label='Main responsabilities' handleChange={handleResponsabilities}/>

@@ -8,14 +8,13 @@
     font-family: 'Nunito Sans', sans-serif;
     font-size: 12px;
     font-weight: 100;
-    color: var(--important-ok);
 
     --primary: #1c1c1c;
     --alert: rgb(244, 240, 37);
     --secondary: rgb(243, 243, 243);
     --warning: rgb(192, 49, 49);
-    --important-ok: rgb(113, 186, 113);
-    --important-simple: rgb(110, 217, 253);
+    --important-ok: rgb(250, 185, 221);
+    --important-simple: rgb(132, 216, 241);
 }
 
 body {
@@ -69,22 +68,8 @@ header {
 }
 
 
-main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 4rem;
-}
-
-aside {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
-
-.curriculum-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.btn {
+    border: none;
+    border-radius: 2%;
+    cursor: pointer;
 }

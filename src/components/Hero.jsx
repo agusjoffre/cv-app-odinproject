@@ -4,6 +4,7 @@ import Curriculum from "./Curriculum"
 import {initialPersonData} from "../personData"
 
 import "../styles/index.css"
+import "../styles/hero.css"
 
 export default function Hero () {
 

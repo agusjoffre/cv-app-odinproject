@@ -1,0 +1,93 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+}
+.container-presentation-cv {
+    display: flex;
+    justify-content: center;
+    gap: 0.4rem;
+
+}
+
+.cv-presentation {
+    font-size: 4rem;
+    font-weight: 800;
+}
+
+.cv-presentation-description {
+    font-size: 2rem;
+    line-height: 2.4rem;
+    color: var(--secondary);
+}
+
+.cv-presentation-email {
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 12px;
+    width: 15rem;
+    background-color: var(--important-simple);
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--primary);
+    margin-top: .5rem;
+}
+
+span {
+    color: var(--important-simple);
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+.container-education {
+    display: flex;
+    gap: 1rem;
+}
+
+.cv-education-head-p,
+.cv-work-head-p {
+    font-size: 2.3rem;
+    font-weight: 500;
+    border-bottom: solid 1px var(--alert);
+}
+
+.Card {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: .3rem;
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+    border-bottom: solid 1px var(--secondary);
+}
+.container-top {
+    display: flex;
+    gap: 1rem;
+}
+
+.Card-head{
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--secondary);
+}
+
+.Card-degree {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: var(--important-simple);
+}
+
+.Card-date {
+    font-size: 1rem;
+    font-weight: 400;
+    color: var(--important-ok);
+}
+
+.Card-responsabilities {
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--secondary);
+}

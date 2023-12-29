@@ -1,0 +1,62 @@
+.cv-form-head {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--secondary);
+}
+
+input {
+    color: var(--alert);
+    background-color: var(--primary);
+    outline: none;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+textarea {
+    color: var(--alert);
+    background-color: var(--primary);
+    outline: none;
+    border: none;
+    padding: 1rem;
+    width: 100%;
+    height: 15rem;
+    font-size: 1rem;
+    font-weight: 300;
+}
+
+textarea::placeholder {
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
+
+input::placeholder {
+    color: var(--secondary);
+    font-size: 0.9rem;
+}
+
+
+
+.btn-form {
+    background-color: var(--alert);
+    color: var(--primary);
+    font-size: 1.3rem;
+    font-weight: 600;
+    padding: 0.5rem;
+}
+
+.btn-form:hover {
+    background-color: var(--important-simple);
+    color: var(--primary);
+    transition: all ease 0.3s;
+}
+
+.form-card  {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1.3rem;
+}

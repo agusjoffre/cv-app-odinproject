@@ -32,8 +32,8 @@ export default function EducationForm ( { setData } ) {
     }
 
     return (
-         <form onSubmit={handleEducationForm}> 
-            <h1>Your education.</h1>
+         <form onSubmit={handleEducationForm} className="form-card"> 
+            <h1 className="cv-form-head">Your education:</h1>
             <FormInput
                 label='School name'
                 value={ schoolName }

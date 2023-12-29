@@ -36,8 +36,8 @@ export default function GeneralForm ({setData}) {
 
 
     return (
-        <form onSubmit={handleGeneralForm}>
-            <h1>General information about you.</h1>
+        <form onSubmit={handleGeneralForm} className="form-card">
+            <h1 className="cv-form-head">General information about you:</h1>
             <FormInput
                 label='Name'
                 value={ name }

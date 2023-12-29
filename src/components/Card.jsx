@@ -4,8 +4,9 @@ export default function Card ( { data, type } ) {
         <div className="Card">
             { type === 'EDUCATION' ? (
                 <>
-                <h1 className="Card-head">{ data.schoolName }</h1>
-                <p className="Card-date">{data.date}</p>
+                    <h1 className="Card-head">{ data.schoolName }</h1>
+                    <p className="Card-degree">{ data.degree }</p>
+                    <p className="Card-date">{data.date}</p>
                 </>
             ) : (
                     <>
