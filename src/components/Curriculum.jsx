@@ -7,8 +7,7 @@ export default function Curriculum({ data, setData }) {
     <>
       <div className="card container-presentation-cv">
         <h1 className="cv-presentation">
-          Hey, I am
-          <span>{data.name ? data.name : "Anonymous person"}</span>
+          Hey, I am <span>{data.name ? data.name : "Anonymous person"}</span>
         </h1>
         <p className="cv-presentation-description">{data.description}</p>
         <p className="cv-presentation-email">{data.email}</p>
@@ -27,7 +26,7 @@ export default function Curriculum({ data, setData }) {
             <Card
               cvData={data}
               data={educationExperience}
-              type="EDUCATION"
+              tipo="EDUCATION"
               key={educationExperience.id}
               setData={setData}
             />
@@ -48,7 +47,7 @@ export default function Curriculum({ data, setData }) {
             <Card
               cvData={data}
               data={workExperience}
-              type="WORK"
+              tipo="WORK"
               key={workExperience.id}
               setData={setData}
             />
