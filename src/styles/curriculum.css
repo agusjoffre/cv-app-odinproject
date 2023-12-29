@@ -62,6 +62,7 @@ span {
     padding-bottom: 2rem;
     padding-top: 1rem;
     border-bottom: solid 1px var(--secondary);
+    cursor: pointer;
 }
 .container-top {
     display: flex;
@@ -90,4 +91,34 @@ span {
     font-size: 2rem;
     font-weight: 300;
     color: var(--secondary);
+}
+
+.Card-buttons-container {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 1rem;
+}
+
+.Card-btn {
+    border: none;
+    width: 5rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 2rem 0.5rem 2rem;  
+}
+
+.Card-btn-edit {
+    background-color: var(--important-ok);
+    color: var(--primary);
+}
+
+.Card-btn-delete {
+    background-color: var(--warning);
+    color: var(--secondary);
+
 }
