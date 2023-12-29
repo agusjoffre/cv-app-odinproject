@@ -16,7 +16,7 @@ export default function Curriculum({ data, setData }) {
         <div className="container-top">
           <img
             className="icon cv-education-icon"
-            src="../public/icons/education.svg"
+            src="./icons/education.svg"
             alt=""
           />
           <p className="cv-education-head-p">Education</p>
@@ -35,11 +35,7 @@ export default function Curriculum({ data, setData }) {
       </div>
       <div className="card container-work">
         <div className="container-top">
-          <img
-            className="icon cv-work-icon"
-            src="../public/icons/work.svg"
-            alt=""
-          />
+          <img className="icon cv-work-icon" src="./icons/work.svg" alt="" />
           <p className="cv-work-head-p">Work</p>
         </div>
         {data.work.map((workExperience) => {
