@@ -33,17 +33,18 @@ export default function WorkForm ( { setData } ) {
         setCompanyName( '' )
         setPosition( '' )
         setResponsabilities( '' )
-        setDate( '' )
+        setDate('')
+
     }
 
 
     return (
         <form onSubmit={handleWorkForm} className="form-card">
             <h1 className="cv-form-head">Your work experience:</h1>
-            <FormInput label='Company name' handleChange={handleCompany}/>
-            <FormInput label='Position' handleChange={handlePosition}/>
-            <FormInput label='Main responsabilities' handleChange={handleResponsabilities}/>
-            <FormInput label='Date' handleChange={handleDate}/>
+            <FormInput label='Company name' handleChange={handleCompany} value={companyName}/>
+            <FormInput label='Position' handleChange={handlePosition}value={position}/>
+            <FormInput label='Main responsabilities' handleChange={handleResponsabilities} value={responsabilities}/>
+            <FormInput label='Date' handleChange={handleDate} value={date}/>
             <ButtonSubmit/>
         </form>
     )
