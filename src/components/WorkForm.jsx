@@ -1,14 +1,49 @@
-import React from "react"
+import React, { useState } from "react"
 import FormInput from "./FormInput"
 import ButtonSubmit from "./ButtonSubmit"
-export default function WorkForm () {
+export default function WorkForm ( { setData } ) {
+    
+    const [ companyName, setCompanyName ] = useState( '' )
+    const [ position, setPosition ] = useState( '' )
+    const [ responsabilities, setResponsabilities ] = useState( '' )
+    const [ date, setDate ] = useState( '' )
+
+    const handleCompany = ( e ) => {
+        setCompanyName( e.target.value )
+    }
+
+    const handlePosition = ( e ) => {
+        setPosition(e.target.value)
+    }
+
+    const handleResponsabilities = ( e ) => {
+        setResponsabilities( e.target.value )
+    }
+
+    const handleDate = ( e ) => {
+        setDate(e.target.value)
+    }
+
+    const handleWorkForm = ( e ) => {
+        e.preventDefault()
+        setData( ( prevData ) => ( {
+            ...prevData,
+            work: [...prevData.work, {companyName, position, responsabilities, date}]
+        } ) )
+        setCompanyName( '' )
+        setPosition( '' )
+        setResponsabilities( '' )
+        setDate( '' )
+    }
+
+
     return (
-        <form>
+        <form onSubmit={handleWorkForm}>
             <h1>Your experience.</h1>
-            <FormInput label='Company name'/>
-            <FormInput label='Position' />
-            <FormInput label='Main responsabilities' />
-            <FormInput label='Date' />
+            <FormInput label='Company name' handleChange={handleCompany}/>
+            <FormInput label='Position' handleChange={handlePosition}/>
+            <FormInput label='Main responsabilities' handleChange={handleResponsabilities}/>
+            <FormInput label='Date' handleChange={handleDate}/>
             <ButtonSubmit/>
         </form>
     )

@@ -1,12 +1,20 @@
-export default function Card ( { data } ) {
-    
-    /* Encontrar la forma de que pueda reutilizarse tanto para EDUCATION como para WORK */
+export default function Card ( { data, type } ) {
 
     return (
         <div className="Card">
-            <h1 className="Card-head">{ data.schoolName } - {data.degree}</h1>
-            <p className="Card-date">{data.date }</p>
-            <p className="Card-responsabilities">{/* if responsabilities entonces responsabilities */}</p>
+            { type === 'EDUCATION' ? (
+                <>
+                <h1 className="Card-head">{ data.schoolName }</h1>
+                <p className="Card-date">{data.date}</p>
+                </>
+            ) : (
+                    <>
+                        <h1 className="Card-head">{ data.companyName } - {data.position}</h1>
+                        <p className="Card-date">{ data.date }</p>
+                        <p className="Card-responsabilities">{data.responsabilities}</p>
+                    </>
+            ) }
+
             
         </div>
     )

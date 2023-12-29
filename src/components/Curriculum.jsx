@@ -20,7 +20,18 @@ export default function Curriculum ( { data } ) {
                 </p>
                 { data.education.map( ( educationExperience ) => {
                     return (
-                         <Card data={ educationExperience } key={() => random}/>
+                        <Card data={ educationExperience } type={"EDUCATION"} key={ () => random } />
+                    )
+                })}
+            </div>
+            <div className="card container-work">
+                <img className="icon cv-work-icon" src="../src/assets/icons/work.svg" alt="" />
+                <p className="cv-work-head-p">
+                    Work
+                </p>
+                { data.work.map( ( workExperience ) => {
+                    return (
+                         <Card data={ workExperience } type={"WORK"} key={() => random}/>
                     )
                 })}
             </div>
